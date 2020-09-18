@@ -31,7 +31,7 @@ jobs:
       - name: Set package version to environment variable
         run: echo ::set-env name=PACKAGE_VERSION::$(expr match "$GITHUB_REF" 'refs/tags/\([v0-9.]*\)')
       - name: config npm package version
-        run: npm version $PACKAGE_VERSION
+        run: npm --no-git-tag-version version $PACKAGE_VERSION
       - run: npm ci
       - run: npm publish --access public
         env:
@@ -49,7 +49,7 @@ jobs:
       - name: Set package version to environment variable
         run: echo ::set-env name=PACKAGE_VERSION::$(expr match "$GITHUB_REF" 'refs/tags/\([v0-9.]*\)')
       - name: config npm package version
-        run: npm version $PACKAGE_VERSION
+        run: npm --no-git-tag-version version $PACKAGE_VERSION
       - run: npm ci
       - run: npm publish --access public
         env:

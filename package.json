@@ -22,7 +22,12 @@
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@web3-react/core": "6.1.1",
+    "@web3-react/injected-connector": "6.0.7",
+    "@web3-react/walletconnect-connector": "6.1.6",
+    "ethers": "5.0.14"
+  },
   "peerDependencies": {
     "react": "^16.9.0"
   },

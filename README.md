@@ -1,6 +1,6 @@
 # use-ethereum
 
-> 
+>
 
 [![NPM](https://img.shields.io/npm/v/use-ethereum.svg)](https://www.npmjs.com/package/use-ethereum) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -29,7 +29,7 @@ const Example = () => {
 
 ## License
 
-MIT © [yurenju](https://github.com/yurenju)
+MIT © [Perpetual Protocol](https://github.com/perpetual-protocol)
 
 ---
 

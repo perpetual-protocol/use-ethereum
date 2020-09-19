@@ -1,10 +1,10 @@
 {
-  "name": "use-ethereum",
+  "name": "@perp/use-ethereum",
   "version": "1.0.0",
   "description": "",
-  "author": "yurenju",
+  "author": "Yuren Ju <yurenju@gmail.com>",
   "license": "MIT",
-  "repository": "yurenju/use-ethereum",
+  "repository": "perpetual-protocol/use-ethereum",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",

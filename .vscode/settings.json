@@ -27,6 +27,8 @@
     ],
     "cSpell.words": [
         "localstorage",
+        "prebuild",
+        "predeploy",
         "walletconnect"
     ]
 }

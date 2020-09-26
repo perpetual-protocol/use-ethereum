@@ -16,13 +16,19 @@
   "scripts": {
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
+    "prebuild": "shx rm -f node_modules/await-semaphore/index.ts",
     "build": "rollup -c && tsc -d --emitDeclarationOnly --noEmit false --declarationDir dist",
     "start": "rollup -c -w",
     "prepare": "npm run build",
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@web3-react/core": "6.1.1",
+    "@web3-react/injected-connector": "6.0.7",
+    "@web3-react/walletconnect-connector": "6.1.6",
+    "ethers": "5.0.14"
+  },
   "peerDependencies": {
     "react": "^16.9.0"
   },
@@ -31,6 +37,7 @@
     "@babel/runtime": "^7.3.1",
     "@rollup/plugin-babel": "^5.2.0",
     "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-json": "4.1.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-typescript": "^5.0.2",
     "@rollup/plugin-url": "^5.0.1",
@@ -44,6 +51,7 @@
     "react-test-renderer": "^16.9.0",
     "rollup": "^2.26.9",
     "rollup-plugin-peer-deps-external": "^2.2.0",
+    "shx": "0.3.2",
     "tslib": "^2.0.1",
     "typescript": "^3.2.4"
   }

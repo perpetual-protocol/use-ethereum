@@ -1,21 +1,10 @@
-import * as React from "react"
+import { providers } from "ethers"
+import { useConnection } from "./connection"
 
-export const useMyHook = () => {
-    let [{ counter }, setState] = React.useState<{
-        counter: number
-    }>({
-        counter: 0,
-    })
+const { getNetwork } = providers
 
-    React.useEffect(() => {
-        let interval = window.setInterval(() => {
-            counter++
-            setState({ counter })
-        }, 1000)
-        return () => {
-            window.clearInterval(interval)
-        }
-    }, [])
+export const useEthereum = (defaultNetwork = getNetwork("homestead"), options?: any) => {
+    const { connect, disconnect, connectorId } = useConnection(defaultNetwork, options)
 
-    return counter
+    return { connect, disconnect, connectorId }
 }

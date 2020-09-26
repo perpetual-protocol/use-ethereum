@@ -26,5 +26,9 @@
     "cSpell.enableFiletypes": [
     ],
     "cSpell.words": [
+        "localstorage",
+        "prebuild",
+        "predeploy",
+        "walletconnect"
     ]
 }

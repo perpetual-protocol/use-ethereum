@@ -30,5 +30,6 @@
         "prebuild",
         "predeploy",
         "walletconnect"
-    ]
+    ],
+    "debug.javascript.usePreview": false
 }
